@@ -1,0 +1,55 @@
+<h1><strong>Contact us</strong></h1>
+
+<main class="contact-main">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="font_card">Contact infomation</mat-card-title>
+            <mat-card-subtitle class="font_card">We are available 24 hours for your attention</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item class="font_card"><mat-icon>phone</mat-icon>+56 9 XXXX XXXX</mat-list-item>
+                <mat-list-item class="font_card"><mat-icon>email</mat-icon>email@example.com</mat-list-item>
+                <mat-list-item class="font_card"><mat-icon>location_on</mat-icon>Calle falsa #123</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <div class="circle"></div>
+    </mat-card>
+    
+    <section class="userData">
+        <div>
+            <tr>
+                <mat-form-field class="input">
+                    <mat-label>First name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field class="input">
+                    <mat-label>Last Name (optional)</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </tr>
+        </div>
+        
+        <div>
+            <app-email-validator class="input"></app-email-validator>
+            <mat-form-field class="input">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+56 9 &nbsp;</span>
+                <input type="tel" matInput placeholder="555-555-1234">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="message">
+                <mat-label>Message</mat-label>
+                <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
+                <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+              </mat-form-field>
+        </div>
+        
+        <button mat-flat-button color="primary">Send</button>
+
+    </section>
+</main>

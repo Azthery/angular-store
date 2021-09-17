@@ -1,0 +1,29 @@
+<mat-toolbar class="footer" color='primary'>
+    <mat-toolbar-row class="footer-up">
+        
+        <div class="footer-up_icon">
+            <a>About it store</a>
+            <div>
+                <mat-icon>code</mat-icon>
+                <mat-icon>report_problem</mat-icon>
+                <mat-icon>chrome_reader_mode</mat-icon>
+            </div>
+        </div>
+
+        <div class="footer-up__contact">
+            <a routerLink="/contact">Contact</a>
+            <mat-form-field>
+                <input matInput [formControl]="emailFiel" placeholder="Enter you email" type="email">
+                <button mat-raised-button (click)="sendEmail()" [disabled]="emailFiel.invalid">Send</button>
+            </mat-form-field>
+        </div>
+
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="footer-down">
+        <a>Privacy Policy</a>
+        <a>Coockies Policy</a>
+        <a>FAQs</a>
+    </mat-toolbar-row>
+    
+</mat-toolbar>

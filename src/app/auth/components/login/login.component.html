@@ -1,0 +1,48 @@
+<form [formGroup]="form">
+    <mat-card color="warn" class="row center-xs">
+    
+        <mat-card-header>
+            <div class="col-xs center">
+                <mat-card-title>Login</mat-card-title>
+            </div>
+        </mat-card-header>
+    
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="Email" formControlName='email' matInput type="email">
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="Password" formControlName='password' matInput type="password">
+                    </mat-form-field>
+                </div>
+            </div>
+            
+            <mat-card-actions class="row middle-xs">
+    
+                <div class="div--row">
+                    <a routerLink="">Forgot password?</a>
+                    <div class="row center-xs middle-xs">
+                        <input type="checkbox" name="" id="">
+                        <p>Remember me</p>
+                    </div>
+                </div>
+                
+                <div class="col-xs center-xs">
+                    <button [disabled]="form.invalid" (click)="login($event)" mat-raised-button color="primary" type="submit" class="button--login">Login</button>
+                </div>
+                <div class="col-xs center">
+                    <a routerLink="/register">Sign up</a>
+                </div>
+    
+            </mat-card-actions>
+    
+        </mat-card-content>
+    
+    </mat-card>
+</form>

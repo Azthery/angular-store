@@ -1,0 +1,21 @@
+section{
+    display: flex;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    
+    button{
+        margin: 5px;
+    }
+}
+.buttons{
+    flex-direction: row;
+    width: 20px;
+}
+img{
+    width: 100%;
+}

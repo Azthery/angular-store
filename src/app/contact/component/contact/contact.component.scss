@@ -1,0 +1,63 @@
+*{
+    display: flex;
+}
+h1{
+    font-size: xx-large;
+    justify-content: center;
+    margin: 20px;
+}
+.contact-main{
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0px;
+    flex-direction: column;
+}
+@media (min-width: 576px){
+    .contact-main{
+        flex-direction: row;
+        margin: 10px;
+    }
+
+}
+mat-card{
+    background-color: rgb(79, 45, 134);
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.font_card{
+    padding: 5px;
+    color: white;
+}
+.mat-icon{
+    padding-right: 5px;
+}
+.circle{
+    background-color: rgb(206, 48, 172);
+    border-radius: 100px 0px 0px 0px;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    position: relative;
+    left: 20px;
+}
+button{
+    width: 120px;
+    margin: 15px;
+    justify-content: center;
+    align-self: flex-end;
+}
+.userData{
+    flex-direction: column;
+}
+.input{
+    margin: 15px;
+    width: 200px;
+
+}
+.message{
+    margin: 15px;
+    width: 100%;
+}

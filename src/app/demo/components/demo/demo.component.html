@@ -1,0 +1,55 @@
+<div>
+    <!-- <input type="text" [(ngModel)]="title"> -->
+    {{ title }}
+  </div>
+  <div>
+    <!-- <input [(ngModel)]="nombre"> -->
+    A que tu nombre es: {{nombre}}
+    </div>
+  <div>
+    <!-- <input [ngModel]="apellido"> -->
+    Tu apellido es 🤔 {{apellido}}
+  </div>
+  <br><hr><!-- ///////////////////////////////////////////////////// -->
+  
+  <!-- pipe -->
+  <div> Pipe <br>
+    <!-- <input type="text" style="width: 25px;" [(ngModel)]="numberExpontial"> ^2 = -->
+    {{ numberExpontial | exponential}}
+
+  </div>
+  <br><hr><!-- ///////////////////////////////////////////////////// -->
+  <!-- Uso de nglf -->
+  <div>
+    <!-- <input type="text" [(ngModel)]="condicionante"> -->
+    <div *ngIf="condicionante == 'password'">
+      contraseña ingresada
+    </div>
+    <div [ngSwitch]="condicionante">
+      <p *ngSwitchCase="'juan'"> este es juan</p>
+      <p *ngSwitchCase="'gabriel'"> este es gabriel</p>
+      <p *ngSwitchCase="'nicolai'"> este es nicolai </p>
+    </div>
+  </div>
+  
+  <br>
+  
+  <div>
+    Ingresa el stando <br>
+    <!-- <input type="text" [(ngModel)]="zawarudo"> -->
+    <img *ngIf="zawarudo == 'ZA WARUDO'" src="https://i.pinimg.com/originals/af/c8/7b/afc87b53146aaeaf78eaad0bb50fd8a2.gif">
+  </div>
+  
+  <br><hr><br>
+  
+  <button (click)="addItem(nameItem)">Add item</button>
+  <!-- <input type="text" [(ngModel)]="nameItem"> -->
+  <ul>
+    <li *ngFor="let index of items; let i = index">
+      {{ i }} {{ index }}
+      <button (click)="removeItem(i)">Remove Item</button>
+    </li>
+    <li *ngIf=""></li>
+  </ul>
+  
+  

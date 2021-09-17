@@ -1,0 +1,25 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.header__button{
+  color: white;
+  text-decoration: none;
+  margin: 0px 15px;
+}
+.header__button:hover{
+  background-color: rgba(0, 0, 0, 0.171);
+}

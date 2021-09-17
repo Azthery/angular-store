@@ -1,0 +1,36 @@
+:host{
+    display: flex;
+    justify-content: center;
+}
+mat-card{
+    width: 400px;
+    a{
+        color: rgb(66, 33, 185);
+    }
+}
+mat-card-header{
+    flex-direction: column;
+}
+mat-form-field{
+    width: 250px;
+}
+mat-card-actions{
+    div{
+        padding: 5px;
+        p{
+            margin: 0px;
+        }
+    }
+    .div--row{
+        display: flex;
+        justify-content: row;
+        align-items: center;
+        justify-content: center;
+        a, div{
+            padding: 0px 6px;
+        }
+    }
+    .button--login{
+        width: 230px;
+    }
+}

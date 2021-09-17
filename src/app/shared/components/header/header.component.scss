@@ -1,0 +1,17 @@
+*{
+    color:blanchedalmond;
+}
+.header{
+    width: 100%;
+}
+nav > a {
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: large;
+}
+nav > a.active {
+    background-color: rgba(25, 22, 212, 0.63);
+}
+.cart{
+    color: black;
+}
