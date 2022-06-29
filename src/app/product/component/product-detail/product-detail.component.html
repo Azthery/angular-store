@@ -1,12 +1,24 @@
-<section *ngIf="product">
-    <div>
+<section *ngIf="product" class="product">
+    <div class="product__left">
         <img [src]="product.image" alt="">
     </div>
-    <div>
-        <ul>
-            <li>Nombre: {{ product.title }}</li>
-            <li>Precio: {{ product.price | currency}}</li>
-        </ul>
+    <div class="product__right">
+        <div class="product__right__header">
+            <h3 class="product__right__header--title">
+                 {{ product.title }}
+            </h3>
+            <div class="product__right__header__starts">
+                <div *ngFor="let star of stars">
+                    <mat-icon [ngClass]="star ? 'color--yellow' : 'color--gray'">
+                        star
+                    </mat-icon>
+                </div>
+            </div>
+            <h3 class="product__right__header--price color--green">
+                {{ product.price | currency}}
+            </h3>
+        </div>
+
         <p>{{ product.description }}</p>
         <div class="buttons">
             <button (click)="createProduct()">crear</button>

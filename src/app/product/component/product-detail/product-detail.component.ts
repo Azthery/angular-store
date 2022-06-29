@@ -14,6 +14,7 @@ import { ProductsComponent } from '../products/products.component';
 export class ProductDetailComponent implements OnInit {
 
   public product: Product;
+  public stars: Array<any>;
 
   constructor(
      private route: ActivatedRoute,
@@ -24,6 +25,7 @@ export class ProductDetailComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
       this.fetchProduct(id);
+      this.getStars();
     });
   }
 
@@ -70,5 +72,20 @@ export class ProductDetailComponent implements OnInit {
       .subscribe( res => {
         console.log(res);
       });
+  }
+
+  getRandomNum(min:number, max:number): number {
+    max = max + 1;
+    return Math.floor((Math.random() * (max - min) + min));
+  }
+
+  getStars(): void{
+    const numStar = this.getRandomNum(1, 5);
+    let stars = new Array(5);
+    stars = stars.fill(true);
+    stars = stars.fill(false, numStar);
+
+    this.stars = stars;
+    console.log(stars)
   }
 }
