@@ -20,11 +20,8 @@
         </div>
 
         <p>{{ product.description }}</p>
-        <div class="buttons">
-            <button (click)="createProduct()">crear</button>
-            <button (click)="updateProduct()">update</button>
-            <button (click)="deleteProduct()">delete</button>
-        </div>
+        <app-add-to-cart-button [product]="product" ></app-add-to-cart-button>
+        <!-- <app-test-handle-product></app-test-handle-product> -->
     </div>
     
 </section>

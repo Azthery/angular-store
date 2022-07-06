@@ -8,14 +8,14 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
 import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
-import { AddCartComponent } from './component/add-cart/add-cart.component';
+import { AddToCartButtonComponent } from './component/add-to-cart-button/add-to-cart-button.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductsComponent,
     ProductDetailComponent,
-    AddCartComponent,
+    AddToCartButtonComponent,
   ],
   imports: [
     CommonModule,

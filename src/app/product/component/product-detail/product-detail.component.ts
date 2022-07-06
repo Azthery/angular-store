@@ -4,7 +4,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { ProductsService } from '../../../core/services/products/products.service';
 import { Product } from '../../../core/models/product.model';
-import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -36,44 +35,6 @@ export class ProductDetailComponent implements OnInit {
       });
   }
 
-  // crear producto
-  createProduct() {
-    const newProduct: Product = {
-      id: '123',
-      title: 'EL Homero-Móvil',
-      image: 'https://pbs.twimg.com/media/Eegm5L0XoAErTRE.jpg',
-      price: 82000,
-      description: `Toda mi vida he buscado un auto donde me sienta vivo,
-      poderso como gorila pero suave y comodo como una nube,
-      ¡ahora al fin lo he encontrado!.
-      Homero!, el auto para Homero`
-    };
-    this.productsService.createProduct(newProduct)
-      .subscribe( product => {
-        console.log(product);
-      });
-  }
-
-  // actualizar producto
-  updateProduct() {
-    const updateProduct: Partial<Product> = {
-      image: 'https://miro.medium.com/max/960/0*TdZODGTh_LAA3v--.gif',
-      price: 82001,
-    };
-    this.productsService.updateProduct('123', updateProduct)
-      .subscribe( product => {
-        console.log(product);
-      });
-  }
-
-  // eliminar producto
-  deleteProduct(){
-    this.productsService.deleteProduct('123')
-      .subscribe( res => {
-        console.log(res);
-      });
-  }
-
   getRandomNum(min:number, max:number): number {
     max = max + 1;
     return Math.floor((Math.random() * (max - min) + min));
@@ -86,6 +47,5 @@ export class ProductDetailComponent implements OnInit {
     stars = stars.fill(false, numStar);
 
     this.stars = stars;
-    console.log(stars)
   }
 }
